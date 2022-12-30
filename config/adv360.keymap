@@ -36,15 +36,27 @@
     keymap {
         compatible = "zmk,keymap";
 
+      //   ,--------------------------------------------------.                                           ,--------------------------------------------------.
+      //   |    =   |   1  |   2  |   3  |  4   |   5  | Tog 1|                                           | Mod 3|   6  |   7  |   8  |   9  |   0  |   -    |
+      //   |--------+------+------+------+------+------+------|                                           |------+------+------+------+------+------+--------|
+      //   |   Tab  |   '  |   ,  |   .  |   P  |   Y  | Home |                                           | End  |   F  |   G  |   C  |   R  |   L  |    /   |
+      //   |--------+------+------+------+------+------+------|       ,-----+-----.  ,-----+-----.        |------+------+------+------+------+------+--------|
+      //   |   Esc  |   A  |   O  |   E  |   U  |   I  |  (   |       |L Ctl|L Alt|  |L Gui|R ctl|        |  )   |   D  |   H  |   T  |   N  |   S  |   \    |
+      //   |--------+------+------+------+------+------+------' .-----+-----+-----|  |-----+-----+-----.  '------+------+------+------+------+------+--------|
+      //   | L Shift|   ;  |   Q  |   J  |   K  |   X  |        |Back |     |  ;  |  |  [  |     |     |         |   B  |   M  |   W  |   V  |   Z  | R Shift|
+      //   |--------+------+------+------+------+------'        |Space| Del |-----|  |-----|Enter|Space|         '------+------+------+------+------+--------|
+      //   |  Mod 2 |   `  | CAPS | Left | Right|               |     |     |  :  |  |  ]  |     |     |                |  Up  | Down | PgUp | PgDn |  Mod 2 |
+      //   `--------+------+------+------+------'               `-----+-----+-----'  `-----+-----+-----'                '------+------+------+------+--------'
+
 
         default_layer {
-            bindings = <
- &kp EQUAL          &kp N1         &kp N2      &kp N3     &kp N4    &kp N5                   &tog 1      &mo 3             &kp N6     &kp N7     &kp N8            &kp N9     &kp N0    &kp MINUS
-   &kp TAB  &kp APOSTROPHE      &kp COMMA  &kp PERIOD      &kp P     &kp Y                    &none      &none              &kp F      &kp G      &kp C             &kp R      &kp L    &kp SLASH
-   &kp ESC           &kp A          &kp O       &kp E      &kp U     &kp I            &kp SEMICOLON  &kp LCTRL           &kp LALT                                &kp LGUI  &kp RCTRL    &kp COLON          &kp D   &kp H   &kp T   &kp N   &kp S  &kp BACKSLASH
- &kp LSHFT   &kp SEMICOLON          &kp Q       &kp J      &kp K     &kp X                    &none      &none           &kp HOME      &none      &none  &kp LEFT_BRACKET      &none        &none          &kp B   &kp M   &kp W   &kp V   &kp Z      &kp RSHFT
-     &mo 2       &kp GRAVE  &kp LESS_THAN    &kp LEFT  &kp RIGHT  &kp BSPC                  &kp DEL    &kp END  &kp RIGHT_BRACKET  &kp ENTER  &kp SPACE            &kp UP   &kp DOWN  &kp PAGE_UP  &kp PAGE_DOWN   &mo 2
-            >;
+          bindings = <
+            &kp EQUAL   &kp N1           &kp N2      &kp N3       &kp N4      &kp N5   &tog 1                                                                        &mo 3      &kp N6   &kp N7   &kp N8     &kp N9      &kp N0      &kp MINUS
+            &kp TAB     &kp APOSTROPHE   &kp COMMA   &kp PERIOD   &kp P       &kp Y    &kp HOME                                                                      &kp END    &kp F    &kp G    &kp C      &kp R       &kp L       &kp SLASH
+            &kp ESC     &kp A            &kp O       &kp E        &kp U       &kp I    &kp LPAR   &kp LCTRL   &kp LALT                        &kp LGUI   &kp RCTRL   &kp RPAR   &kp D    &kp H    &kp T      &kp N       &kp S       &kp BSLH
+            &kp LSHFT   &kp SEMICOLON    &kp Q       &kp J        &kp K       &kp X    &none      &none       &kp SEMI       &none &none      &kp LBKT   &none       &none      &kp B    &kp M    &kp W      &kp V       &kp Z       &kp RSHFT
+            &mo 2       &kp GRAVE        &kp CAPS    &kp LEFT     &kp RIGHT            &kp BKSP   &kp DEL     &kp COLON                       &kp RBKT   &kp ENTER   &kp SPACE           &kp UP   &kp DOWN   &kp PG_UP   &kp PG_DN   &mo 2
+          >;
         };
 
         layer_keypad {
